@@ -1,0 +1,132 @@
+@import './font.css';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'roboto';
+}
+
+.container {
+  max-width: 1330px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+:root {
+  --morning-background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  --dark-color: #000;
+  --dark-color-active: #00a3d5;
+  --font-size1: 62px;
+  --font-size2: 34px;
+  --font-size3: 16px;
+  --font-size4: 46px;
+  --services-box: rgba(0,0,0,.15);
+}
+
+.dark-theme {
+  --morning-background: linear-gradient(to right, #292929 0%, black 100%);
+  --dark-color: #fff;
+  --dark-color-active: #2dd9fe;
+  --services-box: rgb(55 55 55 / 50%);
+}
+
+@keyframes changeBackground {
+  0% {
+    background-image: #000;
+  }
+
+  100% {
+    background-image: #fff;
+  }
+}
+
+@keyframes changeBackground2 {
+  0% {
+    background-image: #fff;
+  }
+
+  100% {
+    background-image: #000;
+  }
+}
+
+body {
+  animation: changeBackground 0.3s ease;
+  background-image: var(--morning-background);
+  transition: 1.3s ease;
+}
+
+body.dark-theme {
+  animation: changeBackground2 0.3s ease;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  background: none;
+  border: none;
+}
+
+
+/*  */
+
+/* The switch - the box around the slider */
+.switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 3.5em;
+  height: 2em;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  --background: #28096b;
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--background);
+  transition: .5s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.4em;
+  width: 1.4em;
+  border-radius: 50%;
+  left: 10%;
+  bottom: 15%;
+  box-shadow: inset 8px -4px 0px 0px #fff000;
+  background: var(--background);
+  transition: .5s;
+}
+
+input:checked+.slider {
+  /* background-color: #522ba7; */
+  background-color: #00a3d5;
+}
+
+input:checked+.slider:before {
+  transform: translateX(100%);
+  box-shadow: inset 15px -4px 0px 15px #fff000;
+}
