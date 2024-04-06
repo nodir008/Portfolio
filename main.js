@@ -1,7 +1,7 @@
 const dark = document.querySelector('.checkbox');
 const body = document.body;
 const navBtnsLang = document.querySelector('.nav__btns-lang');
-const navLang = document.querySelector('.nav__lang');
+const navLang = document.querySelector('.nav__leng');
 const nav = document.querySelector('.nav');
 
 let section = document.querySelectorAll('section');
@@ -10,16 +10,16 @@ let isDarkMode = false;
 
 
 function changeLanguage(language) {
-  // .nav__lang elementini yopish
+  // Close the .nav__lang element
   navLang.classList.remove('active');
 
-  // .nav__link va .home__about elementlarini tanlash
-  var languageElements = document.querySelectorAll('.nav__link, .home__about');
+  // Select .nav__link, .home__about, and .services__box-item elements
+  let languageElements = document.querySelectorAll('.nav__link, .home__about, .services__box-item');
 
-  // Har bir til elementini o'zgartirish
+  // Change each language element
   languageElements.forEach(function (element) {
     if (element.classList.contains('nav__link')) {
-      // .nav__link elementlarini o'zgartirish
+      // Change .nav__link elements
       if (language === 'uz') {
         element.innerText = element.getAttribute('data-uz');
       } else if (language === 'ru') {
@@ -27,37 +27,60 @@ function changeLanguage(language) {
       } else if (language === 'en') {
         element.innerText = element.getAttribute('data-en');
       }
-    } var homeAboutElements = document.querySelectorAll('.home__about');
-
-    // Har bir til elementini o'zgartirish
-    homeAboutElements.forEach(function (element) {
-      // .home__about elementlarini o'zgartirish
-      if (language === 'uz') {
-        element.querySelector('.home__about-subtitle').innerText = element.querySelector('.home__about-subtitle').getAttribute('data-uz');
-        element.querySelector('.home__about-title').innerText = element.querySelector('.home__about-title').getAttribute('data-uz');
-        element.querySelector('.home__about-text').innerText = element.querySelector('.home__about-text').getAttribute('data-uz');
-        element.querySelector('.home__about-theme').innerText = element.querySelector('.home__about-theme').getAttribute('data-uz');
-        element.querySelector('.home__about-btn').innerText = element.querySelector('.home__about-btn').getAttribute('data-uz');
-      } else if (language === 'ru') {
-        element.querySelector('.home__about-subtitle').innerText = element.querySelector('.home__about-subtitle').getAttribute('data-ru');
-        element.querySelector('.home__about-title').innerText = element.querySelector('.home__about-title').getAttribute('data-ru');
-        element.querySelector('.home__about-text').innerText = element.querySelector('.home__about-text').getAttribute('data-ru');
-        element.querySelector('.home__about-theme').innerText = element.querySelector('.home__about-theme').getAttribute('data-ru');
-        element.querySelector('.home__about-btn').innerText = element.querySelector('.home__about-btn').getAttribute('data-ru');
-      } else if (language === 'en') {
-        element.querySelector('.home__about-subtitle').innerText = element.querySelector('.home__about-subtitle').getAttribute('data-en');
-        element.querySelector('.home__about-title').innerText = element.querySelector('.home__about-title').getAttribute('data-en');
-        element.querySelector('.home__about-text').innerText = element.querySelector('.home__about-text').getAttribute('data-en');
-        element.querySelector('.home__about-theme').innerText = element.querySelector('.home__about-theme').getAttribute('data-en');
-        element.querySelector('.home__about-btn').innerText = element.querySelector('.home__about-btn').getAttribute('data-en');
-      }
-    });
-
+    } else if (element.classList.contains('home__about')) {
+      // Change .home__about elements
+      element.querySelector('.home__about-subtitle').innerText = element.querySelector('.home__about-subtitle').getAttribute('data-' + language);
+      element.querySelector('.home__about-title').innerText = element.querySelector('.home__about-title').getAttribute('data-' + language);
+      element.querySelector('.home__about-text').innerText = element.querySelector('.home__about-text').getAttribute('data-' + language);
+      element.querySelector('.home__about-theme').innerText = element.querySelector('.home__about-theme').getAttribute('data-' + language);
+      element.querySelector('.home__about-btn').innerText = element.querySelector('.home__about-btn').getAttribute('data-' + language);
+    } else {
+      // Change .services__box-item elements
+      element.querySelector('.services__box-title').innerText = element.querySelector('.services__box-title').getAttribute('data-' + language);
+      element.querySelector('.services__box-text').innerText = element.querySelector('.services__box-text').getAttribute('data-' + language);
+    }
   });
 
-  // Tanlangan tilni local storage ga saqlash
+  // Select .about elements
+  let aboutElements = document.querySelectorAll('.about');
+
+  // Change language for .about elements
+  aboutElements.forEach(function (element) {
+    element.querySelector('.about__about-title').innerText = element.querySelector('.about__about-title').getAttribute('data-' + language);
+    element.querySelector('.about__about-subtitle').innerText = element.querySelector('.about__about-subtitle').getAttribute('data-' + language);
+    element.querySelector('.about__about-text').innerText = element.querySelector('.about__about-text').getAttribute('data-' + language);
+    element.querySelector('.home__about-btn').innerText = element.querySelector('.home__about-btn').getAttribute('data-' + language);
+  });
+
+  let servisecElements = document.querySelectorAll('.services');
+
+  // Change language for .about elements
+  servisecElements.forEach(function (element) {
+    element.querySelector('.services-title').innerText = element.querySelector('.services-title').getAttribute('data-' + language);
+    // element.querySelector('.about__about-subtitle').innerText = element.querySelector('.about__about-subtitle').getAttribute('data-' + language);
+    // element.querySelector('.about__about-text').innerText = element.querySelector('.about__about-text').getAttribute('data-' + language);
+    // element.querySelector('.home__about-btn').innerText = element.querySelector('.home__about-btn').getAttribute('data-' + language);
+  });
+
+  let contactElements = document.querySelectorAll('.contact');
+
+  // Har bir contact elementini o'zgartirish
+  contactElements.forEach(function (element) {
+    element.querySelector('.contact__title').innerText = element.querySelector('.contact__title').getAttribute('data-' + language);
+
+    let contactLinks = element.querySelectorAll('.contact__links-link');
+    contactLinks.forEach(function (link) {
+      link.innerText = link.getAttribute('data-' + language);
+    });
+  });
+
+
+
+  // Save selected language to local storage
   localStorage.setItem('selectedLanguage', language);
 }
+
+
 
 // Saqlangan tilni yuklash va saytni ulgurish
 function loadSelectedLanguage() {
@@ -146,5 +169,6 @@ window.addEventListener('scroll', handleScroll);
 
 
 navBtnsLang.addEventListener('click', function () {
+  console.log('asas');
   navLang.classList.toggle('active');
 });

@@ -27,6 +27,13 @@
       </ul>
 
       <div class="nav__btns" data-aos="fade-left" data-aos-delay="1000" data-aos-duration="1000">
+
+        <div class="nav__leng">
+          <span onclick="changeLanguage('uz')">Uz</span>
+          <span onclick="changeLanguage('ru')">Ru</span>
+          <span onclick="changeLanguage('en')">En</span>
+        </div>
+
         <svg class="nav__btns-lang" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
           <path fill="currentColor"
             d="M12 22q-2.05 0-3.875-.788t-3.187-2.15q-1.363-1.362-2.15-3.187T2 12q0-2.075.788-3.887t2.15-3.175Q6.3 3.575 8.124 2.788T12 2q2.075 0 3.888.788t3.174 2.15q1.363 1.362 2.15 3.175T22 12q0 2.05-.788 3.875t-2.15 3.188q-1.362 1.362-3.175 2.15T12 22m0-2.05q.65-.9 1.125-1.875T13.9 16h-3.8q.3 1.1.775 2.075T12 19.95m-2.6-.4q-.45-.825-.787-1.713T8.05 16H5.1q.725 1.25 1.813 2.175T9.4 19.55m5.2 0q1.4-.45 2.488-1.375T18.9 16h-2.95q-.225.95-.562 1.838T14.6 19.55M4.25 14h3.4q-.075-.5-.112-.987T7.5 12q0-.525.038-1.012T7.65 10h-3.4q-.125.5-.187.988T4 12q0 .525.063 1.013T4.25 14m5.4 0h4.7q.075-.5.113-.987T14.5 12q0-.525-.038-1.012T14.35 10h-4.7q-.075.5-.112.988T9.5 12q0 .525.038 1.013T9.65 14m6.7 0h3.4q.125-.5.188-.987T20 12q0-.525-.062-1.012T19.75 10h-3.4q.075.5.113.988T16.5 12q0 .525-.038 1.013T16.35 14m-.4-6h2.95q-.725-1.25-1.812-2.175T14.6 4.45q.45.825.788 1.713T15.95 8M10.1 8h3.8q-.3-1.1-.775-2.075T12 4.05q-.65.9-1.125 1.875T10.1 8m-5 0h2.95q.225-.95.563-1.838T9.4 4.45Q8 4.9 6.912 5.825T5.1 8" />
@@ -38,12 +45,6 @@
           </label>
         </div>
       </div>
-      <div class="nav__lang">
-        <span onclick="changeLanguage('uz')">Uz</span>
-        <span onclick="changeLanguage('ru')">Ru</span>
-        <span onclick="changeLanguage('en')">En</span>
-      </div>
-
     </div>
   </nav>
 
@@ -78,47 +79,51 @@
   <section id="about" class="about">
     <div class="container">
       <div class="home__image">
-        <img class="home__image-img" src="./images/user.png" alt="" data-aos="fade-right" data-aos-delay="400"
-          data-aos-duration="1000">
+        <img class="home__image-img" src="./images/user.png" alt="" data-aos="fade-right" data-aos-delay="200"
+          data-aos-duration="500">
       </div>
-      <div class="about__about " data-aos="fade-down-left" data-aos-delay="200" data-aos-duration="1000">
-        <h2 class="about__about-title" data-aos="fade-right" data-aos-delay="400" data-aos-duration="1000">About
-          <span>Me</span>
-        </h2>
-        <p class="about__about-subtitle" data-aos="fade-left" data-aos-delay="400" data-aos-duration="1000">Frontedn
-          Developer</p>
-        <p class="about__about-text" data-aos="fade-right" data-aos-delay="400" data-aos-duration="1000">I am a
-          Frontend Developer with good knowledge of HTML, CSS, JavaScript and
-          Vue.js.
-          With a background in
-          creating exciting web projects, I'm here to help you bring your web ideas to life.
-          <br>
-          During my time at ProWeb Training Center, I learned a lot about different aspects of web development and
-          constantly strive to expand my knowledge to better serve those who need to create digital solutions.
-          <br>
-          Whether it's creating websites for travelers, restaurants, businesses, or small events, I'm ready to start
-          your web projects and turn your visions into reality.
+      <div class="about__about " data-aos="fade-down-left" data-aos-delay="100" data-aos-duration="500">
+        <h2 class="about__about-title" data-aos="fade-right" data-aos-delay="200" data-aos-duration="500"
+          data-en="About Me" data-ru="Обо мне" data-uz="Men haqimda">About <span>Me</span></h2>
+        <p class="about__about-subtitle" data-aos="fade-left" data-aos-delay="200" data-aos-duration="500"
+          data-en="Frontend Developer" data-ru="Фронтенд разработчик" data-uz="Frontend dasturchi">Frontend Developer
         </p>
-        <button class="home__about-btn" data-aos="fade-left" data-aos-delay="400" data-aos-duration="1000">Downland
-          CV</button>
+        <p class="about__about-text" data-aos="fade-right" data-aos-delay="200" data-aos-duration="500"
+          data-en="I am a Frontend Developer with good knowledge of HTML, CSS, JavaScript and Vue.js. With a background in creating exciting web projects, I'm here to help you bring your web ideas to life. During my time at ProWeb Training Center, I learned a lot about different aspects of web development and constantly strive to expand my knowledge to better serve those who need to create digital solutions. Whether it's creating websites for travelers, restaurants, businesses, or small events, I'm ready to start your web projects and turn your visions into reality."
+          data-ru="Я - веб-разработчик с хорошими знаниями HTML, CSS, JavaScript и Vue.js. Имею опыт создания захватывающих веб-проектов. Готов помочь воплотить ваши веб-идеи в жизнь. Во время обучения в центре обучения ProWeb я изучил много различных аспектов веб-разработки и постоянно стремлюсь расширить свои знания, чтобы лучше обслуживать тех, кто нуждается в создании цифровых решений. Будь то создание веб-сайтов для путешественников, ресторанов, бизнеса или небольших мероприятий, я готов приступить к вашим веб-проектам и превратить ваши видения в реальность."
+          data-uz="Men Frontend Developer, HTML, CSS, JavaScript va Vue.js ga yaxshi bilim egasman. Qiziqtarli veb loyihalarni yaratishda o'zimizga ishlayman, sizning veb fikrlaringizni hayotga o'tkazishga yordam berishga tayyorman. ProWeb O'quv Markazida o'qigan vaqtimda, veb rivojlanishning turli asoslari haqida ko'p narsa o'rganib chiqdim va doimiy ravishda o'z bilimlarimi kengaytirishga harakat qilaman. Sairlar, restoranlar, biznes yoki kichik tadbirlar uchun veb-saytlar yaratish bo'lsa, men veb loyihalaringizni boshlashga va tasavvurlaringizni amalga oshirishga tayyorman.">
+          I am a Frontend Developer with good knowledge of HTML, CSS, JavaScript and Vue.js. With a background in
+          creating
+          exciting web projects, I'm here to help you bring your web ideas to life. During my time at ProWeb Training
+          Center, I learned a lot about different aspects of web development and constantly strive to expand my
+          knowledge
+          to better serve those who need to create digital solutions. Whether it's creating websites for travelers,
+          restaurants, businesses, or small events, I'm ready to start your web projects and turn your visions into
+          reality.</p>
+        <button class="home__about-btn" data-aos="fade-left" data-aos-delay="200" data-aos-duration="500"
+          data-en="Download CV" data-ru="Скачать резюме" data-uz="CV-ni yuklab oling">Download CV</button>
       </div>
     </div>
   </section>
 
   <section id="services" class="services">
     <div class="container">
-      <h1 class="services-title" data-aos="fade-down" data-aos-delay="400">Our <span>Services</span></h1>
+      <h1 class="services-title" data-aos="fade-down" data-aos-delay="200" data-uz="Bizning Xizmatlarimiz"
+        data-ru="Наши услуги" data-en="Our Services">Our
+        <span>Services</span>
+      </h1>
       <swiper-container navigation="true" class="mySwiper mySwiper1" loop slides-per-view="3" autoplay-delay="3000"
-        autoplay-disable-on-interaction="false" cursore-grap="true" data-aos="fade-up" data-aos-delay="400">
+        autoplay-disable-on-interaction="false" cursore-grap="true" data-aos="fade-up" data-aos-delay="200">
         <swiper-slide class="services__swiper-slide">
           <div class="services__box-item">
             <img class="services__box-img" src="./images/html.png" alt="">
-            <h2 class="services__box-title">Html</h2>
-            <p class="services__box-text">HTML (HyperText Markup Language) is a standardized language used to create
-              web
-              pages. It is used to
-              structure the content of web pages and specify how elements should be displayed on browsers. HTML
-              consists
+            <h2 class="services__box-title" data-uz="HTML" data-ru="HTML" data-en="HTML">Html</h2>
+            <p class="services__box-text"
+              data-uz="HTML (HyperText Markup Language) veb-sahifalarni yaratishda ishlatiladigan standartlashtirilgan til. U veb-sahifalar tarkibini tuzish va elementlarni brauzerlarda qanday ko'rinishga ega bo'lishi mumkinligini belgilash uchun ishlatiladi. HTML kontentning tuzilish va ko'rinishini aniqlaydigan teglar va atributlardan iborat."
+              data-ru="HTML (HyperText Markup Language) - стандартизированный язык, используемый для создания веб-страниц. Он используется для структурирования содержимого веб-страниц и определения того, как элементы должны отображаться в браузерах. HTML состоит из набора тегов и атрибутов, которые определяют структуру и представление содержимого."
+              data-en="HTML (HyperText Markup Language) is a standardized language used to create web pages. It is used to structure the content of web pages and specify how elements should be displayed on browsers. HTML consists of a set of tags and attributes that define the structure and presentation of content.">
+              HTML (HyperText Markup Language) is a standardized language used to create web pages. It is used to
+              structure the content of web pages and specify how elements should be displayed on browsers. HTML consists
               of a set of tags and attributes that define the structure and presentation of content.
             </p>
           </div>
@@ -126,35 +131,47 @@
         <swiper-slide class="services__swiper-slide">
           <div class="services__box-item">
             <img class="services__box-img" src="./images/css.png" alt="">
-            <h2 class="services__box-title">Css</h2>
-            <p class="services__box-text">CSS (Cascading Style Sheets) is a style sheet language used for describing
-              the
-              presentation of a document written in HTML. It is used to control the layout, styling, and appearance of
-              multiple web pages all at once.
-
-            </p>
+            <h2 class="services__box-title" data-uz="CSS" data-ru="CSS" data-en="CSS">Css</h2>
+            <p class="services__box-text"
+              data-uz="CSS (Cascading Style Sheets) – bu HTML-da yozilgan hujjatning ko'rinishini tasvirlash uchun ishlatiladigan stil qo'llanma tili. U bir vaqtning o'zida bir nechta veb-sahifalarining layoutini, stilini va ko'rinishini boshqarish uchun ishlatiladi."
+              data-ru="CSS (Cascading Style Sheets) - это язык таблиц стилей, используемый для описания представления документа, написанного на HTML. Он используется для контроля над макетом, стилизацией и внешним видом нескольких веб-страниц одновременно."
+              data-en="CSS (Cascading Style Sheets) is a style sheet language used for describing the presentation of a document written in HTML. It is used to control the layout, styling, and appearance of multiple web pages all at once.">
+              CSS (Cascading Style Sheets) is a style sheet language used for describing the presentation of a document
+              written in
+              HTML. It is used to control the layout, styling, and appearance of multiple web pages all at once.</p>
           </div>
         </swiper-slide>
+
         <swiper-slide class="services__swiper-slide">
           <div class="services__box-item">
             <img class="services__box-img javaScript" src="./images/js.png" alt="">
-            <h2 class="services__box-title">Js</h2>
-            <p class="services__box-text">JavaScript is a programming language that enables interactive web pages and
-              is
-              an essential part of web development. It allows developers to add dynamic behavior to websites, handle
-              user interactions, and manipulate content in real-time.</p>
+            <h2 class="services__box-title" data-uz="Js" data-ru="Js" data-en="Js">Js</h2>
+            <p class="services__box-text"
+              data-uz="JavaScript interaktiv veb-sahifalarni yo'qotadi va veb-rivojlanishning jonzot qismini tashkil etadi. Ular veb-saytlarga dinamik harakat berish, foydalanuvchi munosabatlarini qabul qilish va kontentni vaqtdagi tarzda menejer qilishga imkoniyat beradi."
+              data-ru="JavaScript - это язык программирования, который делает веб-страницы интерактивными и является неотъемлемой частью веб-разработки. Он позволяет разработчикам добавлять динамическое поведение на веб-сайты, обрабатывать пользовательские взаимодействия и манипулировать контентом в реальном времени."
+              data-en="JavaScript is a programming language that enables interactive web pages and is an essential part of web development. It allows developers to add dynamic behavior to websites, handle user interactions, and manipulate content in real-time.">
+              JavaScript is a programming language that enables interactive web pages and is an essential part of web
+              development. It
+              allows developers to add dynamic behavior to websites, handle user interactions, and manipulate content in
+              real-time.</p>
           </div>
         </swiper-slide>
+
         <swiper-slide class="services__swiper-slide">
           <div class="services__box-item">
             <img class="services__box-img" src="./images/vue.png" alt="">
-            <h2 class="services__box-title">Vue</h2>
-            <p class="services__box-text">Vue.js is a progressive JavaScript framework used for building user
-              interfaces. It's designed to be incrementally adoptable, meaning you can start using it in small parts
-              of
-              your projects and gradually scale up to more complex applications.</p>
+            <h2 class="services__box-title" data-uz="Vue" data-ru="Vue" data-en="Vue">Vue</h2>
+            <p class="services__box-text" 
+          data-uz="Vue.js foydalanuvchi interfeyslarini yaratishda ishlatiladigan progressiv JavaScript frameworkidir. U darajada qabul qilinadigan tarzda ishlatilishi maqsadida dizayn qilingan, bu sizning loyihalaringizning kichik qismlarida boshlash va gradatsion ravishda ko'proq murakkab ilovalarga o'tish imkonini beradi."
+          data-ru="Vue.js - это прогрессивный фреймворк JavaScript, используемый для создания пользовательских интерфейсов. Он спроектирован для поэтапного использования, что означает, что вы можете начать использовать его в маленьких частях ваших проектов и постепенно масштабировать до более сложных приложений."
+          data-en="Vue.js is a progressive JavaScript framework used for building user interfaces. It's designed to be incrementally adoptable, meaning you can start using it in small parts of your projects and gradually scale up to more complex applications.">Vue.js is a progressive JavaScript framework used for building user
+              interfaces. It's designed to be incrementally
+              adoptable, meaning you can start using it in small parts of your projects and gradually scale up to more
+              complex
+              applications.</p>
           </div>
         </swiper-slide>
+
       </swiper-container>
     </div>
   </section>
@@ -163,14 +180,13 @@
     <div class="container">
       <div class="portfolio__html">
         <div class="container">
-          <h1 class="portfolio__title" data-aos="fade-right" data-aos-delay="200" data-aos-duration="1000">HTML CSS
+          <h1 class="portfolio__title" data-aos="fade-right" data-aos-delay="200" data-aos-duration="200">HTML CSS
             <span>Projects</span>
           </h1>
-          <swiper-container data-aos="fade-left" data-aos-delay="200" data-aos-duration="1000"
-            class="mySwiper mySwiper2" effect="coverflow" grab-cursor="true" centered-slides="true"
-            slides-per-view="auto" coverflow-effect-rotate="0" coverflow-effect-stretch="10"
-            coverflow-effect-depth="100" coverflow-effect-modifier="1" coverflow-effect-slide-shadows="true" loop
-            autoplay-delay="2000">
+          <swiper-container data-aos="fade-left" data-aos-delay="200" data-aos-duration="200" class="mySwiper mySwiper2"
+            effect="coverflow" grab-cursor="true" centered-slides="true" slides-per-view="auto"
+            coverflow-effect-rotate="0" coverflow-effect-stretch="10" coverflow-effect-depth="100"
+            coverflow-effect-modifier="1" coverflow-effect-slide-shadows="true" loop autoplay-delay="2000">
             <swiper-slide class="portfolio__swiper-slide">
               <div class="portfolio__swiper">
                 <a target="_blank" href="https://kh1kmatof-cinema.netlify.app"><img class="portfolio__swiper-img"
@@ -261,7 +277,7 @@
           <swiper-container data-aos="fade-left" data-aos-delay="200" data-aos-duration="1000"
             class="mySwiper mySwiper2" effect="coverflow" grab-cursor="true" centered-slides="true"
             slides-per-view="auto" coverflow-effect-rotate="0" coverflow-effect-stretch="10"
-            coverflow-effect-depth="100" coverflow-effect-modifier="1" coverflow-effect-slide-shadows="true" loop
+            coverflow-effect-depth="100" coverflow-effect-modifier="2" coverflow-effect-slide-shadows="true" loop
             autoplay-delay="2000">
             <swiper-slide class="portfolio__swiper-slide">
               <div class="portfolio__swiper">
@@ -337,17 +353,21 @@
     </div>
   </section>
 
-  <section id="contact" class="contact">
+  <section id="contact" class="contact" data-uz="Aloqalar" data-ru="Контакты" data-en="Contacts">
     <div class="container">
-      <h1 class="contact__title">Contacts</h1>
+      <h1 class="contact__title" data-uz="Aloqalar" data-ru="Контакты" data-en="Contacts">Contacts</h1>
       <div class="contact__links">
-        <a target="_blank" href="https://instagram.com/_kh1kmatof__" class="contact__links-link">Writing on
+        <a target="_blank" href="https://instagram.com/_kh1kmatof__" class="contact__links-link"
+          data-uz="Instagramdan yozish" data-ru="Писать в Instagram" data-en="Writing on Instagram">Writing on
           Instagram</a>
-        <a target="_blank" href="https://t.me/kh1kmatof_a" class="contact__links-link">Writing on Telegram</a>
-      </div>
-      <a href="tel:+998937723522" class="contact__title-phone">+998 (93) 772 35 22</a>
+        <a target="_blank" href="https://t.me/kh1kmatof_a" class="contact__links-link" data-uz="Telegramdan yozish"
+          data-ru="Писать в Telegram" data-en="Writing on Telegram">Writing on
+          Telegram</a>
+        </div>
+        <a href="tel:+998937723522" class="contact__title-phone">+998 (93) 772 35 22</a>
     </div>
   </section>
+
 
   <!-- 
 
