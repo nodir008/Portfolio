@@ -149,15 +149,15 @@ body::-webkit-scrollbar-thumb:active {
   align-items: center;
   justify-content: center;
   width: 40%;
-  height: 400px;
+  height: 450px;
 
 }
 
 .home__image-img {
-  box-shadow: 0px 50px 20px -20px #03a9f4;
+  box-shadow: 0px 50px 15px -20px #03a9f4;
   height: 100%;
   object-fit: contain;
-  animation: floatImage 2s ease-in-out infinite;
+  animation: floatImage 3s ease-in-out infinite;
   border-radius: 10px;
 }
 
@@ -293,7 +293,7 @@ body::-webkit-scrollbar-thumb:active {
 .about__about-subtitle {
   font-size: var(--font-size2);
   font-weight: 700;
-  color: var(--dark-color);
+  color: var(--dark-color-active);
 }
 
 .about__about-text {

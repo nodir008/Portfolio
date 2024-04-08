@@ -23,7 +23,6 @@ function changeLanguage(language) {
     } else if (element.classList.contains('home__about')) {
       element.querySelector('.home__about-subtitle').innerText = element.querySelector('.home__about-subtitle').getAttribute('data-' + language);
       element.querySelector('.home__about-title').innerText = element.querySelector('.home__about-title').getAttribute('data-' + language);
-      element.querySelector('.home__about-text').innerText = element.querySelector('.home__about-text').getAttribute('data-' + language);
       element.querySelector('.home__about-theme').innerText = element.querySelector('.home__about-theme').getAttribute('data-' + language);
       element.querySelector('.home__about-btn').innerText = element.querySelector('.home__about-btn').getAttribute('data-' + language);
     } else {
@@ -125,4 +124,12 @@ window.addEventListener('scroll', handleScroll);
 
 navBtnsLang.addEventListener('click', function () {
   navLang.classList.toggle('active');
+});
+
+const typed = new Typed('.home__about-multi', {
+  strings: ["Frontend Developer", "Фронтенд разработчик", "Frontend dasturchiman" ],
+  typeSpeed: 100,
+  backSpeed: 50,
+  backDelay: 1000,
+  loop: true
 });
