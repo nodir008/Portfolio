@@ -6,6 +6,8 @@ const nav = document.querySelector('.nav');
 
 let section = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('.nav__link');
+let images = document.querySelector('.home__image-img');
+let images2 = document.querySelector('.home__image-img2');
 let isDarkMode = false;
 
 function changeLanguage(language) {
@@ -85,8 +87,12 @@ dark.addEventListener('change', function () {
   isDarkMode = !isDarkMode;
   if (isDarkMode) {
     body.classList.add('dark-theme');
+    images.classList.remove('active');
+    images2.classList.remove('active');
   } else {
     body.classList.remove('dark-theme');
+    images.classList.add('active');
+    images2.classList.add('active');
   }
   saveDarkModeState();
 });

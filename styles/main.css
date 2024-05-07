@@ -154,11 +154,29 @@ body::-webkit-scrollbar-thumb:active {
 }
 
 .home__image-img {
-  box-shadow: 0px 50px 15px -20px #03a9f4;
+  /* box-shadow: 0px 50px 15px -20px #03a9f4; */
+  filter: drop-shadow(30px 15px 15px #03a9f4);
   height: 100%;
   object-fit: contain;
   animation: floatImage 3s ease-in-out infinite;
   border-radius: 10px;
+}
+
+.home__image-img.active {
+  filter: none
+}
+
+.home__image-img2 {
+  /* box-shadow: 0px 50px 15px -20px #03a9f4; */
+  filter: drop-shadow(-20px 15px 15px #03a9f4);
+  height: 100%;
+  object-fit: contain;
+  animation: floatImage 3s ease-in-out infinite;
+  border-radius: 10px;
+}
+
+.home__image-img2.active {
+  filter: none
 }
 
 @keyframes floatImage {
